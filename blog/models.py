@@ -1,9 +1,9 @@
 from django.db import models
+
+# Create your models here.
 from django.utils import timezone
-# can be used during chatapplications i guess
 from django.contrib.auth.models import User
 from django.urls import reverse
-# Create your models here.
 
 
 class Post(models.Model):
@@ -16,4 +16,4 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('post-detail', kwargs={'pk': self.pk})
+            return reverse('post-detail', kwargs={'pk': self.pk})
